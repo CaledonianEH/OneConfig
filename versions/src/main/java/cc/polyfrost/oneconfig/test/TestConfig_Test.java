@@ -26,6 +26,9 @@ public class TestConfig_Test extends Config {
     )
     public static boolean testCheckBox = true;
 
+    @CustomOption
+
+
     @Page(
             name = "An actual page",
             description = "yes very cool",

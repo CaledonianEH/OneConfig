@@ -115,9 +115,6 @@ dependencies {
         isTransitive = false
     }
     shade("cc.polyfrost:lwjgl-1.8.9-forge:1.0.0-alpha8")
-    shade("cc.polyfrost:jtokens:1.0.0") {
-        isTransitive = false
-    }
     shadeNoPom(prebundle(shadeRelocated))
 
     configurations.named(JavaPlugin.COMPILE_CLASSPATH_CONFIGURATION_NAME) { extendsFrom(shadeNoPom) }
