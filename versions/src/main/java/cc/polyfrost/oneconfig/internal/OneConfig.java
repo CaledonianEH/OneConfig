@@ -10,6 +10,7 @@ import cc.polyfrost.oneconfig.internal.config.core.KeyBindHandler;
 import cc.polyfrost.oneconfig.internal.gui.BlurHandler;
 import cc.polyfrost.oneconfig.internal.hud.HudCore;
 import cc.polyfrost.oneconfig.libs.eventbus.Subscribe;
+import cc.polyfrost.oneconfig.polyUI.PolyUI;
 import cc.polyfrost.oneconfig.utils.commands.CommandManager;
 import cc.polyfrost.oneconfig.utils.gui.GuiUtils;
 import cc.polyfrost.oneconfig.utils.hypixel.HypixelUtils;
@@ -44,6 +45,7 @@ public class OneConfig {
     @SuppressWarnings("ResultOfMethodCallIgnored")
     public static void init() {
         if (initialized) return;
+        PolyUI.load();
         if (OneConfigConfig.getInstance() == null) {
             OneConfigConfig.getInstance();
         }
