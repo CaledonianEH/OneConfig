@@ -151,6 +151,7 @@ dependencies {
     }
 
     include("cc.polyfrost:lwjgl-$platform:1.0.0-alpha8")
+    include("cc.polyfrost:jtokens:1.0.0", transitive = false)
 
     dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.6.21")
 
