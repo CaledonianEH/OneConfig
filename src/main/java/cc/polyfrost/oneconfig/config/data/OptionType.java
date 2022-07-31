@@ -45,4 +45,8 @@ public enum OptionType {
      * Type: OneKeyBind
      */
     KEYBIND,
+    /**
+     * Type: File or Path
+     */
+    FILE,
 }

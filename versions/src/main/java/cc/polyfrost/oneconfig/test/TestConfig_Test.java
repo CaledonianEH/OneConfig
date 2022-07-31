@@ -11,6 +11,8 @@ import cc.polyfrost.oneconfig.gui.pages.HomePage;
 import cc.polyfrost.oneconfig.libs.universal.UChat;
 import cc.polyfrost.oneconfig.libs.universal.UKeyboard;
 
+import java.io.File;
+
 public class TestConfig_Test extends Config {
 
     @NonProfileSpecific
@@ -25,6 +27,12 @@ public class TestConfig_Test extends Config {
             size = OptionSize.DUAL
     )
     public static boolean testCheckBox = true;
+
+    @FileOption(
+            name = "File option",
+            folder = false
+    )
+    public static File testFile = new File("./options.txt");
 
     @CustomOption
 

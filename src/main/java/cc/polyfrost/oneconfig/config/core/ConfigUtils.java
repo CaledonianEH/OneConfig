@@ -12,9 +12,11 @@ import cc.polyfrost.oneconfig.internal.config.annotations.Option;
 import com.google.gson.FieldAttributes;
 import org.jetbrains.annotations.Nullable;
 
+import java.io.File;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -52,6 +54,9 @@ public class ConfigUtils {
             case DUAL_OPTION:
                 check(OptionType.DUAL_OPTION.toString(), field, boolean.class, Boolean.class);
                 return ConfigDualOption.create(field, instance);
+            case FILE:
+                check(OptionType.FILE.toString(), field, File.class, Path.class);
+                return ConfigFile.create(field, instance);
         }
         return null;
     }
